@@ -9,5 +9,9 @@
     "axk": "AXK",
     "portfolio": "Portfolio",
     "contact": "Contact"
+  },
+  "about": {
+    "title": "About",
+    "text": "I’m Gustavo Vargas, a software engineer passionate about crafting elegant solutions in the shadows of complexity. CEO of AXK, 3x NASA Hackathon winner, and a believer in the power of code to change realities. 🚀🦇"
   }
 }

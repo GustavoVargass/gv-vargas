@@ -10,6 +10,10 @@ html, body, #root {
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Fallback com @layer para classes customizadas */
 @layer utilities {
   .bg-dark {

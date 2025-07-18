@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { useDarkMode } from "./hooks/useDarkMode";
 import { useLanguage } from "./hooks/useLanguage";
+import About from "./sections/About";
 
 function App() {
   const { t } = useTranslation();
@@ -32,7 +33,7 @@ function App() {
           </button>
 
           {/* Logo (desktop only)*/}
-          <div className="text-2xl font-heading">GV</div>
+          <a href="#home" className="text-2xl font-heading">GV</a>
 
           {/* Menu */}
           <nav className="hidden md:flex space-x-6 font-sans">
@@ -138,29 +139,35 @@ function App() {
       {/* Hero */}
 
       {/* Conteúdo central */}
-      <div className="relative z-10 flex flex-col justify-center items-center h-full text-center px-4">
-        <motion.h1
-          className="text-5xl md:text-7xl font-heading text-primary drop-shadow-[0_0_20px_rgba(255,215,0,0.8)]"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          Gustavo Vargas
-        </motion.h1>
-        <motion.p
-          className="mt-4 text-xl md:text-2xl font-sans text-secondary drop-shadow-[0_0_10px_rgba(13,245,227,0.6)]"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 1 }}
-        >
-          {t("hero.subtitle")}
-        </motion.p>
-        <motion.button
-          className="mt-6 px-6 py-3 rounded-lg backdrop-blur-lg bg-white/10 text-primary border border-primary hover:border-secondary hover:text-secondary shadow-xl hover:shadow-secondary transition-all duration-300 font-heading"
-          whileHover={{ scale: 1.1, boxShadow: "0 0 20px #0DF5E3" }}
-        >
-          {t("hero.button")}
-        </motion.button>
+      <div className="relative z-10">
+        {/* Hero */}
+        <section id="home" className="flex flex-col justify-center items-center h-screen text-center px-4">
+          <motion.h1
+            className="text-5xl md:text-7xl font-heading text-primary drop-shadow-[0_0_20px_rgba(255,215,0,0.8)]"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+          >
+            Gustavo Vargas
+          </motion.h1>
+          <motion.p
+            className="mt-4 text-xl md:text-2xl font-sans text-secondary drop-shadow-[0_0_10px_rgba(13,245,227,0.6)]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5, duration: 1 }}
+          >
+            {t("hero.subtitle")}
+          </motion.p>
+          <motion.button
+            className="mt-6 px-6 py-3 rounded-lg backdrop-blur-lg bg-white/10 text-primary border border-primary hover:border-secondary hover:text-secondary shadow-xl hover:shadow-secondary transition-all duration-300 font-heading"
+            whileHover={{ scale: 1.1, boxShadow: "0 0 20px #0DF5E3" }}
+          >
+            {t("hero.button")}
+          </motion.button>
+        </section>
+
+        {/* About Section */}
+        <About darkMode={darkMode}/>
       </div>
     </div>
   );
