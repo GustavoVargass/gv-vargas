@@ -1,0 +1,13 @@
+{
+  "hero": {
+    "subtitle": "Engineering the Shadows",
+    "button": "View Portfolio"
+  },
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "axk": "AXK",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  }
+}

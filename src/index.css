@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@600;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Fallback com @layer para classes customizadas */
+@layer utilities {
+  .bg-dark {
+    background-color: #000000;
+  }
+  .bg-graphite {
+    background-color: #1A1A1A;
+  }
+  .bg-primary {
+    background-color: #FFD700;
+  }
+  .text-primary {
+    color: #FFD700;
+  }
+  .text-secondary {
+    color: #0DF5E3;
+  }
+  .hover\:bg-secondary:hover {
+    background-color: #0DF5E3;
+  }
+  .font-heading {
+    font-family: 'Poppins', sans-serif;
+  }
+  .font-sans {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+.custom-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  position: relative;
+  padding-right: 2rem;
+}
+
+.custom-select-container {
+  position: relative;
+}
+
+.custom-select-container::after {
+  content: '▼';
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #0DF5E3;
+}

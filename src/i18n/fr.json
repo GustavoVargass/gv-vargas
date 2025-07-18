@@ -1,0 +1,13 @@
+{
+  "hero": {
+    "subtitle": "Ingénierie des Ombres",
+    "button": "Voir le Portefeuille"
+  },
+  "navbar": {
+    "home": "Accueil",
+    "about": "À propos",
+    "axk": "AXK",
+    "portfolio": "Portefeuille",
+    "contact": "Contact"
+  }
+}

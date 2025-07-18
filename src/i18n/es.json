@@ -1,0 +1,13 @@
+{
+  "hero": {
+    "subtitle": "Ingeniería en las Sombras",
+    "button": "Ver Portafolio"
+  },
+  "navbar": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "axk": "AXK",
+    "portfolio": "Portafolio",
+    "contact": "Contacto"
+  }
+}
