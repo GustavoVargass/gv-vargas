@@ -1,14 +1,15 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { useDarkMode } from "./hooks/useDarkMode";
+import { useLanguage } from "./hooks/useLanguage";
 
 function App() {
-  const { t, i18n } = useTranslation();
-  const [darkMode, setDarkMode] = useState(true);
+  const { t } = useTranslation();
+  const { darkMode, toggleDarkMode } = useDarkMode(true);
   const [menuOpen, setMenuOpen] = useState(false);
+  const { language, setLanguage } = useLanguage();
 
-  const toggleTheme = () => setDarkMode(!darkMode);
-  const changeLanguage = (lang: string) => i18n.changeLanguage(lang);
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
@@ -52,7 +53,8 @@ function App() {
             {/* Idioma */}
             <div className="custom-select-container">
               <select
-                onChange={(e) => changeLanguage(e.target.value)}
+                value={language}
+                onChange={(e) => setLanguage(e.target.value)}
                 className="custom-select bg-transparent text-secondary font-bold border border-current rounded px-2 py-1"
               >
                 <option value="EN" className="font-bold">
@@ -72,7 +74,7 @@ function App() {
 
             {/* Tema */}
             <button
-              onClick={toggleTheme}
+              onClick={toggleDarkMode}
               className="p-2 border border-current text-secondary rounded-full hover:text-dark transition text-xl"
             >
               {darkMode ? "☀️" : "🌙"}
