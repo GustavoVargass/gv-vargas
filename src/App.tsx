@@ -67,9 +67,6 @@ function App() {
                 <option value="FR" className="font-bold">
                   FR
                 </option>
-                <option value="ES" className="font-bold">
-                  ES
-                </option>
               </select>
             </div>
 
